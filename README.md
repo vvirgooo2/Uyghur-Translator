@@ -31,7 +31,9 @@ python3 setup.py build_ext --inplace
 ### Preparation
 - checkpoint download
 ```
-
+wget https://dl.fbaipublicfiles.com/mms/tts/uig-script_arabic.tar.gz
+tar -zxvf uig-script_arabic.tar.gz
+wget https://dl.fbaipublicfiles.com/mms/asr/mms1b_all.pt'
 ```
 ### download nllb
 ```
