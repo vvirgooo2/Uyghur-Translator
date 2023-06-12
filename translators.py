@@ -1,5 +1,5 @@
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from ScriptConverter4Uyghur import converter
+from convertTool import converter
 
 class Translator:
     def __init__(self, path, local_files_only, max_length):
@@ -82,6 +82,12 @@ class Translator:
         
 
 if __name__ == "__main__":
+
+    # 下载模型至本地
+    # model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
+    # tokenizer_uig = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M", src_lang="uig_Arab")
+    # model.save_pretrained("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M")
+    # tokenizer_uig.save_pretrained("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M")
 
     translator = Translator("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M",True,400)
 
