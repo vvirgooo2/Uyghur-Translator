@@ -1,8 +1,0 @@
-- decoding.type=viterbi
-- dataset.max_tokens=1440000
-- distributed_training.distributed_world_size=1
-- common_eval.path='/home/zzy/mms1b_all.pt'
-- task.data=/home/zzy/Uyghur-Translator/temp_dir/tmp3ie85buc
-- dataset.gen_subset=uig-script_arabic:dev
-- common_eval.post_process=letter
-- decoding.results_path=/home/zzy/Uyghur-Translator/temp_dir/tmp3ie85buc
