@@ -7,11 +7,13 @@ This is a Uyghur language translator that supports speech-to-text in Uyghur lang
 - python >= 3.8  
 - torch  >= 1.13  
 ```
+git clone https://github.com/facebookresearch/fairseq.git
 cd fairseq
 pip install --editable ./ 
 pip install tensorboardX
 
 cd ..
+git clone https://github.com/jaywalnut310/vits.git
 cd vits
 pip install Cython==0.29.21
 pip install librosa
