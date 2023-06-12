@@ -32,8 +32,10 @@ python3 setup.py build_ext --inplace
 
 ```
 ### download nllb
+```
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer, NllbTokenizerFast
 model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
 tokenizer_uig = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M", src_lang="uig_Arab")
 model.save_pretrained("your path")
 tokenizer_uig.save_pretrained("your path")
+```
