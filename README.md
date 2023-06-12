@@ -7,6 +7,7 @@ This is a Uyghur language translator that supports speech-to-text in Uyghur lang
 - python >= 3.8  
 - torch  >= 1.13  
 ```
+# 请注意以下两个git仓库不要在提交时选中
 git clone https://github.com/facebookresearch/fairseq.git
 cd fairseq
 pip install --editable ./ 
