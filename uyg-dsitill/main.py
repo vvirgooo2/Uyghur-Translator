@@ -54,10 +54,10 @@ if __name__ == '__main__':
     hostname = socket.gethostname()
 
     # 组合设备和时间信息，生成唯一的字符串
-    stamp = f"{hostname}_{timestamp}"
-    
+    stamp = f"[{args.taskname}]-{hostname}_{timestamp}"
+
     # log 
-    log_dir = f'logs/[{args.taskname}]-{stamp}'
+    log_dir = f'logs/{stamp}'
     writer = SummaryWriter(log_dir=log_dir, comment=args.taskname)
     logger = logging.getLogger(args.taskname)
     logger.setLevel(logging.DEBUG)
@@ -137,7 +137,7 @@ if __name__ == '__main__':
                 "scheduler_state_dict": lr_scheduler.state_dict(),
             },
                 "checkpoint/saved_model{:d}.pt".format(epoch))
-        logger.info("save to checkpoint/saved_model{:d}.pt".format(epoch))
+        logger.info("save to checkpoint/{}/saved_model{:d}.pt".format(stamp, epoch))
     
     # end test
     metric = evaluate.load("chrf")
