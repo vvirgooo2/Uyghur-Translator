@@ -1,0 +1,11 @@
+flores200_dir: /home/zzy/nfsdata/flores200
+token_uig_dir: /home/zzy/nfsdata/nllb-token-uig
+token_eng_dir: /home/zzy/nfsdata/nllb-token-eng
+gpus: [1,0]
+main_idx: 1
+lr: 0.0003 
+num_epochs: 10
+save_frequency: 3
+batch_size: 8
+vocab_size: 256206
+# ln -s  /nfs4-p1/zzy/ ./nfsdata
