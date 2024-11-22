@@ -1,6 +1,6 @@
 
 # Introduce：  
-This is a Uyghur language translator that supports speech-to-text in Uyghur language, and text-to-speech in Uyghur language using AI. 
+This is a Uyghur language translator that supports speech-to-text in Uyghur language, and text-to-speech in Uyghur language using AI. Notice that we not train the model, we directly use model from MMS. You can find everything in https://huggingface.co/facebook/mms-1b-all and https://github.com/facebookresearch/fairseq/tree/main/examples/mms#asr.
 
 # Usage
 ### Installation
