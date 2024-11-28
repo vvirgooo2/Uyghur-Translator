@@ -34,11 +34,37 @@ python3 setup.py build_ext --inplace
 ```
 
 ### Preparation
-- checkpoint download
+- MMS checkpoint download
 ```
 wget https://dl.fbaipublicfiles.com/mms/tts/uig-script_arabic.tar.gz
 tar -zxvf uig-script_arabic.tar.gz
 wget https://dl.fbaipublicfiles.com/mms/asr/mms1b_all.pt'
 ```
+
+- NLLB checkpoint download  
+
+```
+# run in python
+model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
+tokenizer_uig = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M", src_lang="uig_Arab")
+model.save_pretrained("model/nllb-200-distilled-600M")
+tokenizer_uig.save_pretrained("model/nllb-200-distilled-600M")
+```
+
 ### Example
-ASR_TTS_Run.ipynb
+#### Example of how to use mms to do ASR and TTS: 
+#### Example code
+- ASR_TTS_Run.ipynb  
+
+#### Example of how to use nllb to do Chinese to Uyghur and Uyghur to Chinese: 
+#### API
+- translator.translateArab2Latn()  
+- translator.translateArab2Hans()  
+- translator.translateLatn2Arab()  
+- translator.translateLatn2Hans()  
+- translator.translateHans2Arab()  
+- translator.translateHans2Latn()  
+#### Example code
+- translators.py
+
+

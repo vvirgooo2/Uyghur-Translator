@@ -86,10 +86,10 @@ if __name__ == "__main__":
     # 下载模型至本地
     # model = AutoModelForSeq2SeqLM.from_pretrained("facebook/nllb-200-distilled-600M")
     # tokenizer_uig = AutoTokenizer.from_pretrained("facebook/nllb-200-distilled-600M", src_lang="uig_Arab")
-    # model.save_pretrained("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M")
-    # tokenizer_uig.save_pretrained("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M")
+    # model.save_pretrained("model/nllb-200-distilled-600M")
+    # tokenizer_uig.save_pretrained("model/nllb-200-distilled-600M")
 
-    translator = Translator("/home/disk3/lipeiyu/NLLB/data/nllb-200-distilled-600M",True,400)
+    translator = Translator("model/nllb-200-distilled-600M",True,400)
 
     print(translator.translateArab2Latn('قول باش پۇت كۆز'))
     print(translator.translateArab2Hans('ئىيۇن» خەلقئارا بالىلار بايرىمى يېتىپ كېلىش پەيتىدە، جۇڭگو كوممۇنىستىك پارتىيەسى مەركىزىي كومىتېتىنىڭ باش شۇجىسى، دۆلەت رەئىسى، مەركىزىي ھەربىي كومىتېتنىڭ رەئىسى شى جىنپىڭ 5 - ئاينىڭ 31 - كۈنى چۈشتىن بۇرۇن بېيجىڭ يۈيىڭ مەكتىپىگە كېلىپ، ئوقۇتقۇچى - ئوقۇغۇچىلارنى يوقلىدى ۋە ئۇلاردىن ھال سورىدى، پۈتۈن مەملىكەتتىكى كەڭ ئۆسمۈر - بالىلارنىڭ بايرىمىنى تەبرىكلىدى. شى جىنپىڭ مۇنداق تەكىتلىدى: ئۆسمۈر - بالىلار ۋەتەننىڭ كېلەچىكى، جۇڭخۇا مىللىتىنىڭ ئۈمىدى. يېڭى دەۋردىكى جۇڭگو بالىلىرى ئىرادىسى بار، غايىسى بار، ئۆگىنىشنى سۆيىدىغان، ئەمگەكنى سۆيىدىغان، مىننەتدارلىقنى بىلىدىغان، دوستلۇقنى بىلىدىغان، يېڭىلىق يارىتىشقا جۈرئەت قىلىدىغان، كۈرەش قىلىشقا جۈرئەت قىلىدىغان، ئەخلاقىي، ئەقلىي، جىسمانىي، گۈزەللىك، ئەمگەك جەھەتلەردە ئەتراپلىق يېتىلگەن ياخشى بالىلاردىن بولۇشى كېرەك. ساۋاقداشلارنىڭ قۇدرەتلىك دۆلەت قۇرۇش، مىللەتنى گۈللەندۈرۈش ئۈچۈن ئوقۇشقا ئىرادە باغلاپ، ئاتا - ئانىلارنىڭ ئۈمىدىنى يەردە قويماسلىقىنى، پارتىيە ۋە خەلقنىڭ ئۈمىدىنى يەردە قويماسلىقىنى ئۈمىد قىلىمەن.'))
